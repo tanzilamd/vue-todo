@@ -114,6 +114,40 @@ body {
         overflow-y: scroll;
         padding: 15px 10px;
 
+        .card {
+            .card-header {
+
+            }
+            .card-body {
+                .todo_list_items {
+                    border: 1px solid;
+                    text-transform: capitalize;
+                    font-weight: 600;
+                    line-height: 20px;
+                    vertical-align: middle;
+                    padding-left: 0 ;
+                    margin: 10px 0;
+                    li {
+                        list-style: none;
+                        label {
+                            display: flex;
+                            align-items: center;
+
+                            input {
+                                height: 20px;
+                                width: 20px;
+                            }
+                        }
+                        button {
+                            background-color: transparent;
+                            border: none;
+                        }
+                    }
+                }
+            
+            }
+        }
+
     }
     .bottom {
         flex-basis: 10%;
