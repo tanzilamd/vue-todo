@@ -30,7 +30,7 @@
             <div class="middle">
                 <div class="card">
                     <div class="card-header">
-                        <h5>List</h5>
+                        <h5>List ({{ todo_list.length }}) </h5>
                     </div>
                     <div class="card-body">
                         <!-- search bar -->
@@ -49,6 +49,7 @@
                                             name="" 
                                             :id="'task'+i"
                                             checked
+                                            @click="item.checked = !item.checked"
                                             >
                                         </div>
                                         <div v-else>
@@ -56,7 +57,7 @@
                                             type="checkbox" 
                                             name="" 
                                             :id="'task'+i"
-                                            
+                                            @click="item.checked = !item.checked"
                                             >
                                         </div>
                                          
