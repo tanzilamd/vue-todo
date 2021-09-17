@@ -108,6 +108,49 @@ body {
                 }
             }
         }
+
+        .sidebar {
+            position: absolute;
+            background-color: white;
+            height: 100vh;
+            z-index: 555;
+            top: 0;
+            left: 0;
+            width: 60%;
+            padding-top: 20px;
+            display: none;
+            transition: all linear 5s;
+            
+            a {
+                display: block;
+                text-decoration: none;
+                color: #275670;
+                font-size: 18px;
+                padding: 15px;
+
+            }
+
+            i {
+                color: black;
+                position: absolute;
+                z-index: 999;
+                top: 0;
+                left: 75%;
+                font-size: 18px;
+
+            }
+        }
+
+        .overlay {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 40%;
+            height: 100vh;
+            z-index: 555;
+            opacity: 0;
+            background-color: black;
+        }
     }
     .middle {
         flex-basis: 83%;
