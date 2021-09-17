@@ -33,10 +33,12 @@
                         <h5>List</h5>
                     </div>
                     <div class="card-body">
+                        <!-- search bar -->
                         <div class="d-flex justify-content-between">
                             <input type="text" @keyup="show_todo_title_value" v-model="todo_title" class="form-control w-75" placeholder="write something">
                             <button type="button" @click="add_new_data" class="btn btn-info text-light mx-1">Add</button>
                         </div>
+                        <!-- todo list -->
                         <ul class="todo_list_items">
                             <li v-for="(item, i) in todo_list">
                                 <div class="d-flex justify-content-between">

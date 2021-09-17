@@ -36,7 +36,7 @@ var app2 = new Vue({
                 title: this.todo_title
             }
             this.todo_list.push(data);
-            todo_title = '';
+            this.todo_title = '';
         }
     }
   })
