@@ -16,7 +16,15 @@ navClose.addEventListener('click', function (){
     document.querySelector(".sidebar").setAttribute('style', 'display:none');
     overlay.setAttribute('style', 'opacity:0')
 })
-overlay.addEventListener('click', function (){
-    document.querySelector(".sidebar").setAttribute('style', 'display:none');
-    overlay.setAttribute('style', 'opacity:0')
-})
+// overlay.addEventListener('click', function (){
+//     document.querySelector(".sidebar").setAttribute('style', 'display:none');
+//     overlay.setAttribute('style', 'opacity:0')
+// })
+document.onclick = function (e) {
+    if (e.target.id !== 'sidebar' && e.target.id !== 'sidebar_toggle') {
+        // toggle.classList.remove("active");
+        // navbar.classList.remove("active");
+        document.querySelector(".sidebar").setAttribute('style', 'display:none');
+        overlay.setAttribute('style', 'opacity:0')
+    }
+}
