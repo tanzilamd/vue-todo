@@ -12,11 +12,11 @@ var app2 = new Vue({
                     title: 'test1'
                 },
                 {
-                    checked: false,
+                    checked: true,
                     title: 'test2'
                 },
                 {
-                    checked: false,
+                    checked: true,
                     title: 'test3'
                 },
                 {
@@ -35,8 +35,17 @@ var app2 = new Vue({
                 checked: false,
                 title: this.todo_title
             }
-            this.todo_list.push(data);
-            this.todo_title = '';
+            if (this.todo_title) {
+                this.todo_list.push(data);
+                this.todo_title = '';
+            } else {
+                alert('write something')
+            }
+           
+        },
+        delete_data: function(index) {
+            console.log(index);
+            this.todo_list.splice(index,1)
         }
     }
   })
