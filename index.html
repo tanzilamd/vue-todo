@@ -35,17 +35,18 @@
                     <div class="card-body">
                         <div class="d-flex justify-content-between">
                             <input type="text" class="form-control w-75" placeholder="write something">
-                            <button type="submit" class="btn btn-info text-light mx-1">Add</button>
+                            <button type="button" @click="add_new_data" class="btn btn-info text-light mx-1">Add</button>
                         </div>
                         <ul class="todo_list_items">
-                            <li v-for="i in 2">
+                            <li v-for="(item, i) in todo_list">
                                 <div class="d-flex justify-content-between">
                                     <label :for="'task'+i">
-                                        <input type="checkbox" name="" :id="'task'+i"> title one
+                                        <input type="checkbox" @keyup="show_todo_title_value" v-model="todo_title" name="" :id="'task'+i"> {{item.title}}
                                     </label>
-                                    <button>
+                                    <button >
                                         <i class="fa fa-trash"></i>
                                     </button>
+                                    
                                 </div>
                             </li>
                         </ul>
