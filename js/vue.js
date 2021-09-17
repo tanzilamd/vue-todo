@@ -45,7 +45,12 @@ var app2 = new Vue({
         },
         delete_data: function(index) {
             console.log(index);
-            this.todo_list.splice(index,1)
+            
+            if (this.todo_list[index].checked == true) {
+                this.todo_list.splice(index, 1)
+            } else {
+                alert ('complete the task')
+            }
         }
     }
   })
