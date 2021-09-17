@@ -38,10 +38,10 @@
                             <button type="submit" class="btn btn-info text-light mx-1">Add</button>
                         </div>
                         <ul class="todo_list_items">
-                            <li v-for="i in 10">
+                            <li v-for="i in 2">
                                 <div class="d-flex justify-content-between">
-                                    <label for="1">
-                                        <input type="checkbox" name="" id="1"> title one
+                                    <label :for="'task'+i">
+                                        <input type="checkbox" name="" :id="'task'+i"> title one
                                     </label>
                                     <button>
                                         <i class="fa fa-trash"></i>
