@@ -46,7 +46,7 @@
                         </div>
                         <form class="d-flex justify-content-between" action="" @submit.prevent="add_new_data()">
                             <input id="add_task" type="text" @keyup="show_todo_title_value" v-model="todo_title" class="form-control w-75" placeholder="write something">
-                            <button type="button" @click="add_new_data()" class="btn btn-info text-light mx-1">Add</button>
+                            <button type="submit" @click="add_new_data()" class="btn btn-info text-light mx-1">Add</button>
                         </form>
                         <!-- todo list -->
                         <ul class="todo_list_items">

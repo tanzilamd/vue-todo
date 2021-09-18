@@ -37,6 +37,7 @@ var app2 = new Vue({
             }
             if (this.todo_title) {
                 this.todo_list.push(data);
+                
                 this.todo_title = '';
             } else {
                 alert('write something')
